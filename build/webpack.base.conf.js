@@ -35,10 +35,8 @@ module.exports = {
     extensions: ['.js', '.vue', '.json'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
-      'src': resolve('src'),
-      'assets': resolve('src/assets'),
-      'components': resolve('src/components'),
-      '@': resolve('src')
+      '@': resolve('src'),      
+      'assets': resolve('src/assets')
     }
   },
   module: {
@@ -69,10 +67,6 @@ module.exports = {
           limit: 10000,
           name: utils.assetsPath('media/[name].[hash:7].[ext]')
         }
-      },
-      {
-        test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
-        loader: 'url-loader'
       },
       {
         test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
